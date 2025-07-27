@@ -1,0 +1,149 @@
+/* places.css */
+
+.places {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: auto;
+}
+
+.elements {
+  box-sizing: border-box;
+  display: grid;
+  margin: 0;
+
+  width: calc((880% / 1280) * 100);
+  max-width: 880px;
+  aspect-ratio: 1.186;
+
+  grid-template-columns: repeat(3, calc((282% / 880) * 100));
+  grid-template-rows: repeat(2, calc((361% / 742) * 100));
+  /* grid-auto-rows: 361px; */
+
+  column-gap: calc((17% / 880) * 100);
+  row-gap: calc((20% / 742) * 100);
+
+  /* overflow-y: auto; */
+}
+
+.element {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #000000;
+  border-radius: 5%;
+  overflow: hidden;
+  height: 100%;
+  /* height: auto; */
+}
+
+.element__photo-frame {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  height: calc((282% / 361) * 100);
+  width: 100%;
+
+  position: relative;
+}
+
+.element__photo {
+  margin: 0;
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.element__trash-button {
+  margin: 0;
+  padding: 0;
+  width: 19px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  border: none;
+  z-index: 1;
+  background: none;
+}
+
+.element__trash-image {
+  margin: 0;
+  width: 100%;
+}
+
+.element__trash-image:hover {
+  opacity: 60%;
+}
+
+.element__footer {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: calc((79% / 361) * 100);
+}
+
+.element__title {
+  margin: 0;
+  color: #000000;
+  font-weight: 900;
+  font-size: 24px;
+
+  width: 78%;
+  height: 35%;
+  align-content: center;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element__like-button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+
+  background-image: url("../../images/meGusta.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 21px;
+  height: 19px;
+}
+
+.element__like-button:hover {
+  opacity: 50%;
+}
+
+.element__like-button_active {
+  background-image: url("../../images/meGustaActive.png");
+}
+
+/* ++++++++++  SMALL  max-width: 800px +++++++++ */
+@media screen and (max-width: 800px) {
+  .elements {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    aspect-ratio: unset;
+
+    width: 100%;
+    padding-left: 6%;
+    padding-right: 6%;
+
+    padding-top: 7%;
+  }
+
+  .element {
+    margin-top: 7.5%;
+    aspect-ratio: 0.7811;
+  }
+}

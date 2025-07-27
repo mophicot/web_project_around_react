@@ -1,0 +1,55 @@
+.box {
+  margin: 0;
+  padding: 0;
+}
+
+.popup {
+  height: 100vh;
+  width: 100vw;
+
+  background: rgb(0 0 0 / 50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.popup.active {
+  display: flex;
+}
+
+.image-popup__container {
+  position: relative;
+  max-width: 75vw;
+}
+
+.image-popup__photo {
+  max-height: 75vh;
+  width: 100%;
+  object-fit: contain;
+}
+
+.image-popup__title {
+  margin: 0;
+  font-size: 12px;
+  align-self: flex-start;
+}
+
+.image-popup__close-button {
+  aspect-ratio: 1;
+  width: 32px;
+  position: absolute;
+  object-fit: cover;
+  top: -40px;
+  right: -40px;
+  border: none;
+}
+
+.image-popup__close-button:hover {
+  opacity: 60%;
+}

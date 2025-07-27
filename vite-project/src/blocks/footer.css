@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-banner {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: calc((880% / 1280) * 100);
+  max-width: 880px;
+  height: auto;
+  padding-top: 5.2%;
+  padding-bottom: 4.7%;
+}
+
+.footer-banner__copyright {
+  margin: 0;
+  color: #545454;
+}
+
+/* ++++++++++  SMALL   +++++++++ */
+
+@media screen and (max-width: 800px) {
+  .footer-banner {
+    margin-top: 16.5%;
+    margin-bottom: 12%;
+    padding: 0;
+    width: 100%;
+  }
+
+  .footer-banner__copyright {
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 5%;
+  }
+}
