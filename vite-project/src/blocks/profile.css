@@ -37,11 +37,13 @@
   box-sizing: border-box;
   height: 100%;
   aspect-ratio: 1;
+  background: none;
+  border: none;
 }
 
 /* SPRINT 12 */
 .profile-id__avatar-frame:hover {
-  background-image: url("../../images/editImageIcon.png");
+  background-image: url("../images/editImageIcon.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -49,6 +51,7 @@
 .profile-id__avatar {
   object-fit: cover;
   width: 100%;
+  background: none;
 }
 
 /* SPRINT 12 */

@@ -13,7 +13,8 @@
   left: 0;
   z-index: 1;
 
-  display: none;
+  /* display: none; */
+  display: flex;
 
   justify-content: center;
   align-items: center;
@@ -21,6 +22,35 @@
 
 .popup.active {
   display: flex;
+}
+
+/* SPRINT 13 */
+.popup__title {
+  margin: 0;
+  color: red;
+  font-weight: 900;
+  font-size: 24px;
+  margin-bottom: 54px;
+}
+
+/* SPRINT 13 */
+
+.popup__close {
+  aspect-ratio: 1;
+  width: 32px;
+  /* width: 200px; */
+
+  position: absolute;
+  object-fit: cover;
+
+  /* top: -40px;
+  right: -40px; */
+  border: yellowgreen;
+
+  top: 200px;
+  right: 350px;
+
+  background: none;
 }
 
 .image-popup__container {

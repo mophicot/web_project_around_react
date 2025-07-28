@@ -94,6 +94,16 @@
   border: none;
 }
 
+/* .popup__close {
+  aspect-ratio: 1;
+  width: 32px;
+  position: absolute;
+  object-fit: cover;
+  top: -40px;
+  right: -40px;
+  border: none;
+} */
+
 .form__close-button:hover,
 .form__add-card-close-button:hover {
   opacity: 60%;
