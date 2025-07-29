@@ -1,7 +1,6 @@
 //Card.jsx
 
 import trashIcon from "../../../../images/Trash.svg";
-// import likeIcon from "../../../../images/MeGusta.svg";
 
 export default function Card(props) {
   const { name, link, isLiked } = props.card;
