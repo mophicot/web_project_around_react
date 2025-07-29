@@ -7,9 +7,9 @@ export default function EditAvatar() {
       id="form-avatar-change"
       noValidate
     >
-      <h2 className="form__title id-image-change-form__title">
+      {/* <h2 className="form__title id-image-change-form__title">
         Cambiar foto de perfil
-      </h2>
+      </h2> */}
       <fieldset className="form__fieldset">
         <label htmlFor="url">Url del Avatar</label>
         <input

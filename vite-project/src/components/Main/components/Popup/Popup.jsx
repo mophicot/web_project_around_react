@@ -14,13 +14,9 @@ export default function Popup(props) {
           type="button"
           onClick={onClose} // llama a onClose al hacer clic en el botón
         >
-          <img
-            src={closeIcon}
-            alt="Botón de cierre"
-            // className="profile-id__avatar"
-          />
+          <img src={closeIcon} alt="Botón de cierre" />
         </button>
-        {/* <h3 className="popup__title">{title}</h3> */}
+        {title && <h3 className="popup__title">{title}</h3>}
         {children}
       </div>
     </div>

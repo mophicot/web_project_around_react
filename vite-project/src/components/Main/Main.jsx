@@ -14,6 +14,7 @@ import Popup from "../Main/components/Popup/Popup";
 import NewCard from "../Main/components/Popup/form/NewCard/NewCard";
 import EditProfile from "../Main/components/Popup/form/EditProfile/EditProfile";
 import EditAvatar from "../Main/components/Popup/form/EditAvatar/EditAvatar";
+import ImagePopup from "./components/Popup/ImagePopup/ImagePopup";
 //Card
 import Card from "./components/Card/Card";
 
@@ -41,8 +42,11 @@ const cards = [
 console.log(cards);
 
 export default function Main() {
-  // Popups
+  // Estado para el popup general
   const [popup, setPopup] = useState(null);
+
+  // Nuevo estado para la tarjeta seleccionada (imagen emergente)
+  const [selectedCard, setSelectedCard] = useState(null);
 
   const newCardPopup = { title: "Nuevo lugar", children: <NewCard /> };
   const editProfilePopup = {
@@ -60,6 +64,13 @@ export default function Main() {
 
   function handleClosePopup() {
     setPopup(null);
+
+    setSelectedCard(null); //para cerrar la imagen emergente
+  }
+
+  // Nueva función para abrir el popup de imagen
+  function handleCardClick(card) {
+    setSelectedCard(card);
   }
 
   return (
@@ -124,16 +135,23 @@ export default function Main() {
         {/* Cards */}
         <ul className="elements">
           {cards.map((card) => (
-            <Card key={card._id} card={card} />
+            <Card key={card._id} card={card} onCardClick={handleCardClick} />
           ))}
         </ul>
       </section>
 
-      {/* Popups */}
+      {/* Popups Generales */}
 
       {popup && (
         <Popup onClose={handleClosePopup} title={popup.title}>
           {popup.children}
+        </Popup>
+      )}
+
+      {/* Popup de imagen */}
+      {selectedCard && (
+        <Popup onClose={handleClosePopup} title="">
+          <ImagePopup link={selectedCard.link} name={selectedCard.name} />
         </Popup>
       )}
     </main>

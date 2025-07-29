@@ -3,7 +3,7 @@
 export default function EditProfile() {
   return (
     <form className="form" id="form-edit-profile" noValidate>
-      <h2 className="form__title">Editar perfil</h2>
+      {/* <h2 className="form__title">Editar perfil</h2> */}
       <fieldset className="form__fieldset">
         <label htmlFor="name">Nombre</label>
         <input

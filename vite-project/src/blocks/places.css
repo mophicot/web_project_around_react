@@ -25,6 +25,7 @@
   row-gap: calc((20% / 742) * 100);
 
   /* overflow-y: auto; */
+  list-style-type: none;
 }
 
 .element {

@@ -5,11 +5,18 @@ import trashIcon from "../../../../images/Trash.svg";
 export default function Card(props) {
   const { name, link, isLiked } = props.card;
 
+  const { onCardClick } = props; //para el ImagePopup
+
   return (
     <li className="card">
       <div className="element">
         <div className="element__photo-frame">
-          <img src={link} alt={name} className="element__photo" />
+          <img
+            src={link}
+            alt={name}
+            className="element__photo"
+            onClick={() => onCardClick(props.card)} //al hacer click abre el ImagePopup
+          />
 
           <button
             type="button"

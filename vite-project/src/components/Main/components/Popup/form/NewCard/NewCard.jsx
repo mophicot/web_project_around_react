@@ -3,7 +3,7 @@
 export default function NewCard() {
   return (
     <form className="form" id="form-new-card" noValidate>
-      <h2 className="form__title">Nuevo Lugar</h2>
+      {/* <h2 className="form__title">Nuevo Lugar</h2> */}
       <fieldset className="form__fieldset">
         <label htmlFor="new-place">Título de la nueva tarjeta</label>
         <input
