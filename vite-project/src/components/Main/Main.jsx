@@ -1,16 +1,44 @@
 //Main.jsx
 
+//IMPORTACIONES
+//imagenes
 import avatar from "../../images/Avatar.png";
 import editButton from "../../images/EditButton.png";
 import addButton from "../../images/AddButton.png";
 
+//useState
 import { useState } from "react";
 
-// import Popup from "../Popup/Popup";
+//Popup;
 import Popup from "../Main/components/Popup/Popup";
 import NewCard from "../Main/components/Popup/form/NewCard/NewCard";
 import EditProfile from "../Main/components/Popup/form/EditProfile/EditProfile";
 import EditAvatar from "../Main/components/Popup/form/EditAvatar/EditAvatar";
+//Card
+import Card from "./components/Card/Card";
+
+//CONSTANTES
+//datos ficticios
+const cards = [
+  {
+    isLiked: false,
+    _id: "5d1f0611d321eb4bdcd707dd",
+    name: "Yosemite Valley",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
+    owner: "5d1f0611d321eb4bdcd707dd",
+    createdAt: "2019-07-05T08:10:57.741Z",
+  },
+  {
+    isLiked: false,
+    _id: "5d1f064ed321eb4bdcd707de",
+    name: "Lake Louise",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg",
+    owner: "5d1f0611d321eb4bdcd707dd",
+    createdAt: "2019-07-05T08:11:58.324Z",
+  },
+];
+
+console.log(cards);
 
 export default function Main() {
   // Popups
@@ -93,10 +121,15 @@ export default function Main() {
         </div>
       </section>
       <section className="places" id="places">
-        <div className="elements">{/* Aquí iba el template */}</div>
+        {/* Cards */}
+        <ul className="elements">
+          {cards.map((card) => (
+            <Card key={card._id} card={card} />
+          ))}
+        </ul>
       </section>
 
-      <section className="box">{/* Aquí van los popups*/}</section>
+      {/* Popups */}
 
       {popup && (
         <Popup onClose={handleClosePopup} title={popup.title}>
