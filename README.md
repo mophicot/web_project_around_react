@@ -10,6 +10,14 @@
 Objetivo
 Recrear y modernizar el proyecto "Alrededor de los Estados Unidos" migrándolo a React paso a paso, modularizando la interfaz en componentes reutilizables y manteniendo la misma lógica y estructura visual que el proyecto original en HTML/CSS + JS vanilla.
 
+Este proyecto fue creado con Vite.
+🔥El archivo index.html real está en vite-project/index.html.🔥
+
+🌍Para correr el proyecto:
+cd vite-project
+npm install
+npm run dev
+
 3. DESCRIPCIÓN DE LAS TECNOLOGÍAS Y TÉCNICAS UTILIZADAS.
 
 SPRINT 13
